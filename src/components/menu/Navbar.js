@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <nav className="bg-gray-800 p-4 fixed top-0 w-full z-10 transition duration-300">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold hover:text-black transition duration-300 nav-text">Portfolio Bruno Tito</div>
+        <div className="text-white text-lg font-bold hover:text-black transition duration-300 nav-text">Bruno Tito <small><i>Developer</i></small></div>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
