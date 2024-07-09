@@ -50,7 +50,48 @@ function Welcome() {
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Habilidades</h2>
           <ul className="flex flex-wrap justify-center gap-4 mb-6">
-            {/* Aquí tus íconos de habilidades */}
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-html5-plain colored text-3xl md:text-4xl" title="HTML5"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-css3-plain colored text-3xl md:text-4xl" title="CSS3"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-javascript-plain colored text-3xl md:text-4xl" title="JavaScript"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-react-original colored text-3xl md:text-4xl" title="React"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-vuejs-plain colored text-3xl md:text-4xl" title="Vue.js"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-nodejs-plain colored text-3xl md:text-4xl" title="Node.js"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-express-original colored text-3xl md:text-4xl" title="Express"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-firebase-plain colored text-3xl md:text-4xl" title="Firebase"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-typescript-plain colored text-3xl md:text-4xl" title="TypeScript"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <FontAwesomeIcon icon={faBootstrap} className="text-3xl md:text-4xl text-purple-500" title="Bootstrap" />
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-github-plain colored text-3xl md:text-4xl" title="GitHub"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-figma-plain colored text-3xl md:text-4xl" title="Figma"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-mysql-plain colored text-3xl md:text-4xl" title="MySQL"></i>
+            </li>
+            <li className="transition-transform transform hover:scale-125">
+              <i className="devicon-mongodb-plain colored text-3xl md:text-4xl" title="MongoDB"></i>
+            </li>
           </ul>
           <div className="text-center space-x-4 mt-6">
             <span className="text-gray-400"> | </span>
