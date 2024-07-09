@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/footer/Footer';
 
 function App() {
-  const { darkMode, setDarkMode } = DarkModeProvider;
   return (
     <DarkModeProvider>
       <Router>
