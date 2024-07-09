@@ -5,7 +5,7 @@ import Einstitute from '../assets/images/eins.png';
 import { IoLogoFirebase } from "react-icons/io5";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 
 function Projects() {
