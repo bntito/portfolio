@@ -28,15 +28,15 @@ function Welcome() {
 
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-dark-bg">
         <motion.div 
-          className="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md"
+          className="max-w-4xl w-full bg-white dark:bg-gray-800 dark:text-dark-text p-8 rounded-lg shadow-md"
           initial={{ opacity: 0, translateY: 50 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4"><span className='font-mono'>&lt;/&gt;</span> Bruno Tito {emojiUnicode}</h1>
-          <p className="text-gray-700 text-center mb-6 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 text-center mb-6 leading-relaxed">
             No soy un robot,<br />
             soy un <span className='text-indigo-500'>desarrollador Fullstack</span> apasionado por la programación.<br />
             Mi enfoque se centra en combinar diseño elegante con funcionalidad robusta.
@@ -100,7 +100,7 @@ function Welcome() {
           </div>
           <div className="text-center mt-6">
             <div className="mb-4 flex items-center justify-center">
-              <a href="mailto:brunotitodev@gmail.com" className="text-gray-700 hover:text-black flex items-center mx-2">
+              <a href="mailto:brunotitodev@gmail.com" className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white flex items-center mx-2">
                 <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                 brunotitodev@gmail.com
               </a>
@@ -111,13 +111,12 @@ function Welcome() {
                 <LuCopy className="mr-1" />
               </button>
             </div>
-
             <div>
-              <FontAwesomeIcon icon={faGithub} className="text-2xl mr-2 text-gray-800" />
-              <a href={githubLink} className="text-gray-700 hover:text-black mx-2">GitHub</a>
+              <FontAwesomeIcon icon={faGithub} className="text-2xl mr-2 text-gray-800 dark:text-gray-300" />
+              <a href={githubLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">GitHub</a>
               {' '}
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl mr-2 text-blue-500" />
-              <a href={linkedinLink} className="text-gray-700 hover:text-black mx-2">LinkedIn</a>
+              <a href={linkedinLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">LinkedIn</a>
             </div>
           </div>
         </motion.div>
