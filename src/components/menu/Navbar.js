@@ -24,7 +24,7 @@ function Navbar() {
             className="bg-gray-300 dark:bg-gray-700 text-black dark:text-white p-2 rounded cursor-pointer"
             style={{ fontSize: '1rem' }}
           >
-            {darkMode ? <MdOutlineDarkMode /> : <CiLight />}
+            {darkMode ? <CiLight /> : <MdOutlineDarkMode />}
           </div>
           <div className="text-white text-lg font-bold hover:text-black transition duration-300 nav-text ml-2">Bruno Tito <small><i>Developer</i></small></div>
         </div>
