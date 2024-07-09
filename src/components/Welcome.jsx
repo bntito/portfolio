@@ -2,9 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import emojione from 'emojione';
 import devImage from '../assets/images/dev.jpg';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Welcome() {
   const emojiUnicode = emojione.shortnameToUnicode(':man_technologist:');
+  const githubLink = 'https://github.com/bntito';
+  const linkedinLink = 'https://www.linkedin.com/in/';
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -14,9 +20,10 @@ function Welcome() {
         animate={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">¡Bienvenides! Soy Bruno {emojiUnicode}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4"><span className='font-mono'>&lt;/&gt;</span> Bruno Tito {emojiUnicode}</h1>
         <p className="text-gray-700 text-center mb-6 leading-relaxed">
-          Un apasionado <br /><b>Desarrollador Fullstack</b><br />con experiencia en la creación de aplicaciones web modernas y eficientes.
+          No soy un robot,<br />
+          soy un <span className='text-indigo-500'>desarrollador Fullstack</span> apasionado por la programación.<br />
           Mi enfoque se centra en combinar diseño elegante con funcionalidad robusta.
         </p>
         <div className="text-center mb-6">
@@ -69,13 +76,21 @@ function Welcome() {
           </li>
         </ul>
         <div className="text-center space-x-4 mt-6">
-          <a href="#projects" className="text-blue-500 hover:underline">Explora mis Proyectos</a>
           <span className="text-gray-400"> | </span>
-          <a href="#contact" className="text-blue-500 hover:underline">Contacto</a>
+          <Link to="/projects" className="text-blue-500 hover:underline">Explora mis Proyectos</Link>
+          <span className="text-gray-400"> | </span>
         </div>
         <div className="text-center mt-6">
-          <a href="https://github.com/tu-usuario" className="text-gray-700 hover:text-black mx-2">GitHub</a>
-          <a href="https://www.linkedin.com/in/tu-usuario" className="text-gray-700 hover:text-black mx-2">LinkedIn</a>
+          <div className="mb-4">
+            <a href="mailto:brunotitodev@gmail.com" className="text-gray-700 hover:text-black mx-2"><FontAwesomeIcon icon={faEnvelope} className="mr-2" />brunotitodev@gmail.com</a>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faGithub} className="text-2xl mr-2 text-gray-800" />
+            <a href={githubLink} className="text-gray-700 hover:text-black mx-2">GitHub</a>
+            {' '}
+            <FontAwesomeIcon icon={faLinkedin} className="text-2xl mr-2 text-blue-500" />
+            <a href={linkedinLink} className="text-gray-700 hover:text-black mx-2">LinkedIn</a>
+          </div>
         </div>
       </motion.div>
     </div>
