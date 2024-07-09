@@ -7,12 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+import Form from './contact/Form';
+
 function Welcome() {
   const emojiUnicode = emojione.shortnameToUnicode(':man_technologist:');
   const githubLink = 'https://github.com/bntito';
   const linkedinLink = 'https://www.linkedin.com/in/';
 
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <motion.div 
         className="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md"
@@ -94,6 +97,10 @@ function Welcome() {
         </div>
       </motion.div>
     </div>
+    <div>
+      <Form />
+    </div>
+    </>
   );
 }
 
