@@ -1,6 +1,7 @@
 import React from 'react';
 import Iot from '../assets/images/iot.png';
 import Crece from '../assets/images/crece.png';
+import Einstitute from '../assets/images/eins.png';
 
 function Projects() {
   return (
@@ -22,6 +23,7 @@ function Projects() {
             https://academyiotserver.onrender.com/
           </a>
         </p>
+        <p className="mb-2">Tecnología: React</p>
 
         <div className="flex justify-center">
           <a href="https://iotacademy.netlify.app/" target="_blank" rel="noopener noreferrer" className="block mb-4">
@@ -39,10 +41,29 @@ function Projects() {
         </p>
         <p className="mb-2">Descripción: Aplicación de análisis de sueños diseñada para explorar el subconsciente y descubrir aspectos ocultos.</p>
         <p className="mb-2">Base de datos: MongoDB</p>
+        <p className="mb-2">Tecnología: Manila JS</p>
 
         <div className="flex justify-center">
           <a href="https://crecer.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
             <img src={Crece} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+          </a>
+        </div>
+      </div>
+
+      <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
+        <h3 className="text-xl font-semibold mb-2">Proyecto: e-Institute</h3>
+        <p className="mb-4">
+          <a href='https://e-institute.netlify.app' target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          https://e-institute.netlify.app
+          </a>
+        </p>
+        <p className="mb-2">Descripción: Plataforma educativa.</p>
+        <p className="mb-2">Base de datos: JSON</p>
+        <p className="mb-2">Tecnología: Vue</p>
+
+        <div className="flex justify-center">
+          <a href="https://e-institute.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
+            <img src={Einstitute} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
       </div>
