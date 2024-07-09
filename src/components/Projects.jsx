@@ -4,7 +4,7 @@ import Crece from '../assets/images/crece.png';
 import Einstitute from '../assets/images/eins.png';
 import { IoLogoFirebase } from "react-icons/io5";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faVuejs, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -42,7 +42,7 @@ function Projects() {
             <FontAwesomeIcon icon={faReact} className="mr-1" />
             React
           </div>
-          <div className="bg-yellow-500 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+          <div className="bg-yellow-600 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
             <IoLogoFirebase />
             Firebase
           </div>
@@ -72,9 +72,9 @@ function Projects() {
         </div>
         
         <div className="flex justify-center">
-          <div className="bg-green-500 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
-            <FontAwesomeIcon icon={faVuejs} className="mr-1" />
-            Vue.js
+          <div className="bg-yellow-500 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faJs} className="mr-1" />
+            JavaScript
           </div>
           <div className="bg-green-700 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
             <FontAwesomeIcon icon={faDatabase} className="mr-1" />
