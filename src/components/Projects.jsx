@@ -2,12 +2,18 @@ import React from 'react';
 import Iot from '../assets/images/iot.png';
 import Crece from '../assets/images/crece.png';
 import Einstitute from '../assets/images/eins.png';
+import { IoLogoFirebase } from "react-icons/io5";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+
 
 function Projects() {
   return (
     <section id="projects" className="min-h-screen bg-white p-8 flex flex-col items-center">
       <h2 className="text-3xl font-bold mb-4 text-center">Proyectos</h2>
 
+      {/* Proyecto: IoT Academy */}
       <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
         <h3 className="text-xl font-semibold mb-2">Proyecto: IoT Academy</h3>
         <p className="mb-4">
@@ -30,8 +36,24 @@ function Projects() {
             <img src={Iot} alt="Vista previa de IoT Academy" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-blue-500 text-white rounded-full px-3 py-1 flex items-center mb-2">
+            <FontAwesomeIcon icon={faReact} className="mr-1" />
+            React
+          </div>
+          <div className="bg-yellow-500 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <IoLogoFirebase />
+            Firebase
+          </div>
+          <div className="bg-blue-200 text-gray-700 rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faDatabase} className="mr-1" />
+            MySQL
+          </div>
+        </div>
       </div>
 
+      {/* Proyecto: Crecer */}
       <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
         <h3 className="text-xl font-semibold mb-2">Proyecto: Crecer</h3>
         <p className="mb-4">
@@ -48,13 +70,25 @@ function Projects() {
             <img src={Crece} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-green-500 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faVuejs} className="mr-1" />
+            Vue.js
+          </div>
+          <div className="bg-green-700 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faDatabase} className="mr-1" />
+            MongoDB
+          </div>
+        </div>
       </div>
 
+      {/* Proyecto: e-Institute */}
       <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
         <h3 className="text-xl font-semibold mb-2">Proyecto: e-Institute</h3>
         <p className="mb-4">
           <a href='https://e-institute.netlify.app' target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-          https://e-institute.netlify.app
+            https://e-institute.netlify.app
           </a>
         </p>
         <p className="mb-2">Descripción: Plataforma educativa.</p>
@@ -66,7 +100,19 @@ function Projects() {
             <img src={Einstitute} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-green-500 text-white rounded-full px-3 py-1 flex items-center mb-2">
+            <FontAwesomeIcon icon={faVuejs} className="mr-1" />
+            Vue.js
+          </div>
+          <div className="bg-yellow-500 text-gray-700 rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faDatabase} className="mr-1" />
+            JSON
+          </div>
+        </div>
       </div>
+
     </section>
   );
 }
