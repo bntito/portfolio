@@ -29,7 +29,6 @@ function Projects() {
             https://academyiotserver.onrender.com/
           </a>
         </p>
-        <p className="mb-2">Tecnología: React</p>
 
         <div className="flex justify-center">
           <a href="https://iotacademy.netlify.app/" target="_blank" rel="noopener noreferrer" className="block mb-4">
@@ -63,7 +62,6 @@ function Projects() {
         </p>
         <p className="mb-2">Descripción: Aplicación de análisis de sueños diseñada para explorar el subconsciente y descubrir aspectos ocultos.</p>
         <p className="mb-2">Base de datos: MongoDB</p>
-        <p className="mb-2">Tecnología: Manila JS</p>
 
         <div className="flex justify-center">
           <a href="https://crecer.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
@@ -93,7 +91,6 @@ function Projects() {
         </p>
         <p className="mb-2">Descripción: Plataforma educativa.</p>
         <p className="mb-2">Base de datos: JSON</p>
-        <p className="mb-2">Tecnología: Vue</p>
 
         <div className="flex justify-center">
           <a href="https://e-institute.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
