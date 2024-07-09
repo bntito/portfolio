@@ -1,0 +1,23 @@
+:root {
+  --nav-hover-bg-color: rgb(236, 236, 236);
+  --nav-hover-text-color: black;
+  --nav-hover-text-dark-color: #1a202c;
+}
+
+nav {
+  transition: background-color 0.3s ease;
+}
+
+nav:hover {
+  background-color: var(--nav-hover-bg-color);
+}
+
+nav:hover .nav-text {
+  color: var(--nav-hover-text-color);
+}
+
+nav .nav-text:hover {
+  color: var(--nav-hover-text-dark-color);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
