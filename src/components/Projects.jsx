@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Iot from '../assets/images/iot.png';
 import Crece from '../assets/images/crece.png';
 import Einstitute from '../assets/images/eins.png';
@@ -6,11 +6,13 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faVuejs, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-
+import { DarkModeContext } from '../DarkModeContext'; // Ajusta la ruta según tu estructura de archivos
 
 function Projects() {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <section id="projects" className="min-h-screen bg-white p-8 flex flex-col items-center">
+    <section id="projects" className={`min-h-screen p-8 flex flex-col items-center ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-700'}`}>
       <h2 className="text-3xl font-bold mb-4 text-center">Proyectos</h2>
 
       {/* Proyecto: IoT Academy */}
