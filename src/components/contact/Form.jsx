@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { DarkModeContext } from '../DarkModeContext';
+import { DarkModeContext } from '../../DarkModeContext';
 
 function ContactForm() {
   const { darkMode } = useContext(DarkModeContext);
