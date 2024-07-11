@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { DarkModeContext } from '../../DarkModeContext';
 import { useFetch } from '../../hooks/useFetch';
+import Swal from 'sweetalert2';
+
 function ContactForm() {
   const hostServer = process.env.REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/contact`;
@@ -19,6 +21,14 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    Swal.fire({
+      icon: 'success',
+      title: 'Mensaje Enviado',
+      text: 'Gracias por comunicarte conmigo 😊',
+      showConfirmButton: false,
+      timer: 2000
+    });
+    
     try {
       await createData(api, formData);
       setName('');
