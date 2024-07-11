@@ -12,8 +12,6 @@ function ContactForm() {
   const [message, setMessage] = useState('');
 
   const {
-    dataServer,
-    isLoading,
     createData,
   } = useFetch(null);
 
