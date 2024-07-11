@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { DarkModeContext } from '../../DarkModeContext';
 import { useFetch } from '../../hooks/useFetch';
-
 function ContactForm() {
   const hostServer = process.env.REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/contact`;
-=======
-import React, { useState, useContext } from 'react';
-import { DarkModeContext } from '../../DarkModeContext';
-
-function ContactForm() {
   const { darkMode } = useContext(DarkModeContext);
->>>>>>> c342511aaea29de8fc1b303eb61e9cca6dfc5b3c
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
