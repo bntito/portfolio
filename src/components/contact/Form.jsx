@@ -10,7 +10,6 @@ function ContactForm() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [formStatus, setFormStatus] = useState(null);
 
   const {
     dataServer,
@@ -24,13 +23,11 @@ function ContactForm() {
     e.preventDefault();
     try {
       await createData(api, formData);
-      setFormStatus('success');
       setName('');
       setEmail('');
       setSubject('');
       setMessage('');
     } catch (error) {
-      setFormStatus('error');
     }
   };
 
