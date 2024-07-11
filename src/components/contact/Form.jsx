@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
+import { useFetch } from '../../hooks/useFetch';
 
 function ContactForm() {
+  const hostServer = process.env.REACT_APP_SERVER_HOST;
+  const api = `${hostServer}/api/contact`;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [formStatus, setFormStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const {
+    dataServer,
+    isLoading,
+    createData,
+  } = useFetch(null);
+
+  const formData = { name, email, subject, message };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario, por ejemplo, enviándolo a un servidor
-    console.log('Formulario enviado:', { name, email, subject, message });
-    // Reinicia los campos del formulario
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
+    try {
+      await createData(api, formData);
+      setFormStatus('success');
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    } catch (error) {
+      setFormStatus('error');
+    }
   };
 
   return (

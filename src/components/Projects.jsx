@@ -1,6 +1,7 @@
 import React from 'react';
 import Iot from '../assets/images/iot.png';
 import Crece from '../assets/images/crece.png';
+import Datamanagement from '../assets/images/datamanagement.png';
 import Einstitute from '../assets/images/eins.png';
 import { IoLogoFirebase } from "react-icons/io5";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -77,6 +78,35 @@ function Projects() {
           <div className="bg-green-700 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
             <FontAwesomeIcon icon={faDatabase} className="mr-1" />
             MongoDB
+          </div>
+        </div>
+      </div>
+
+      {/* Proyecto: Firebase App */}
+      <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
+        <h3 className="text-xl font-semibold mb-2">Proyecto: Data Management</h3>
+        <p className="mb-4">
+          <a href='https://managemendata.netlify.app' target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+            https://managemendata.netlify.app
+          </a>
+        </p>
+        <p className="mb-2">Descripción: Gestión de Usuarios.</p>
+        <p className="mb-2">Base de datos: Firebase</p>
+
+        <div className="flex justify-center">
+          <a href="https://managemendata.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
+            <img src={Datamanagement} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+          </a>
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-blue-500 text-white rounded-full px-3 py-1 flex items-center mb-2">
+            <FontAwesomeIcon icon={faReact} className="mr-1" />
+            React
+          </div>
+          <div className="bg-yellow-600 text-white rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <IoLogoFirebase />
+            Firebase
           </div>
         </div>
       </div>
