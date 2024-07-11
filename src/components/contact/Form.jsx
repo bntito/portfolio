@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { DarkModeContext } from '../../DarkModeContext';
 import { useFetch } from '../../hooks/useFetch';
 import Swal from 'sweetalert2';
@@ -14,6 +14,8 @@ function ContactForm() {
   const [message, setMessage] = useState('');
 
   const {
+    dataServer,
+    // isLoading,
     createData,
   } = useFetch(null);
 
@@ -21,23 +23,53 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    Swal.fire({
-      icon: 'success',
-      title: 'Mensaje Enviado',
-      text: 'Gracias por comunicarte conmigo 😊',
-      showConfirmButton: false,
-      timer: 2000
-    });
-    
     try {
-      await createData(api, formData);
+    await createData(api, formData);    
       setName('');
       setEmail('');
       setSubject('');
       setMessage('');
     } catch (error) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Debes corregir la información para poder registrarla',
+        showConfirmButton: false,
+        timer: 2000
+      });
     }
   };
+
+  useEffect(() => {
+    if (dataServer?.status == null) {
+      return;
+    }
+    if (dataServer?.status !== 401) {
+      if (dataServer?.status === 200 || dataServer?.status === 201) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Mensaje Enviado',
+          text: dataServer?.dataServerResult?.message,
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+      if (dataServer?.status === 400 || dataServer?.status === 404) {
+        Swal.fire({
+          icon: 'error',
+          title: dataServer?.dataServerResult.message,
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: dataServer?.dataServerResult.message,
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
+  }, [dataServer]);
 
   return (
     <section id="contact" className={`min-h-screen p-8 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>

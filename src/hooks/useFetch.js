@@ -37,7 +37,6 @@ export const useFetch = (url) => {
   };
 
   const createData = async (url, formData) => {
-    console.log(formData)
     const resp = await fetchData(url, 'POST', formData);
     return resp;
   };
