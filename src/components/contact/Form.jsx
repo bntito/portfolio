@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 
 function ContactForm() {
   const hostServer = process.env.REACT_APP_SERVER_HOST;
   const api = `${hostServer}/api/contact`;
+=======
+import React, { useState, useContext } from 'react';
+import { DarkModeContext } from '../../DarkModeContext';
+
+function ContactForm() {
+  const { darkMode } = useContext(DarkModeContext);
+>>>>>>> c342511aaea29de8fc1b303eb61e9cca6dfc5b3c
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -33,45 +41,45 @@ function ContactForm() {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-gray-100 p-8">
+    <section id="contact" className={`min-h-screen p-8 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
       <h2 className="text-3xl font-bold mb-4 text-center">Contacto</h2>
       <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
         <div>
-          <label className="block text-gray-700">Nombre</label>
+          <label className={`block ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Nombre</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring ${darkMode ? 'bg-gray-800 text-white border-gray-600 focus:border-blue-500' : 'border-gray-300 focus:border-blue-300'}`}
             required
           />
         </div>
         <div>
-          <label className="block text-gray-700">Correo electrónico</label>
+          <label className={`block ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Correo electrónico</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring ${darkMode ? 'bg-gray-800 text-white border-gray-600 focus:border-blue-500' : 'border-gray-300 focus:border-blue-300'}`}
             required
           />
         </div>
         <div>
-          <label className="block text-gray-700">Asunto</label>
+          <label className={`block ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Asunto</label>
           <input
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring ${darkMode ? 'bg-gray-800 text-white border-gray-600 focus:border-blue-500' : 'border-gray-300 focus:border-blue-300'}`}
             required
           />
         </div>
         <div>
-          <label className="block text-gray-700">Mensaje</label>
+          <label className={`block ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Mensaje</label>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring ${darkMode ? 'bg-gray-800 text-white border-gray-600 focus:border-blue-500' : 'border-gray-300 focus:border-blue-300'}`}
             required
           />
         </div>

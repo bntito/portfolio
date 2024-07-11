@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DarkModeContext } from '../DarkModeContext';  // Ajusta la ruta según tu estructura de archivos
 
 function AboutMe() {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <section id="about" className="min-h-screen bg-gray-100 p-8">
+    <section id="about" className={`min-h-screen p-8 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-700'}`}>
       <h2 className="text-3xl font-bold mb-4">Sobre Mí</h2>
       <div className="max-w-3xl mx-auto">
-        <p className="text-gray-700 mb-6">
+        <p className="mb-6">
           ¡Hola! Soy Bruno Tito, un desarrollador Fullstack apasionado por crear aplicaciones web modernas y eficientes. 
           Me encanta combinar diseño elegante con funcionalidad robusta para ofrecer experiencias de usuario excepcionales.
         </p>
@@ -54,7 +57,7 @@ function AboutMe() {
         </ul>
         <hr /><br />
         <h3 className="text-2xl font-semibold mb-4">Experiencia Profesional</h3>
-        <p className="text-gray-700 mb-6">
+        <p className="mb-6">
           Desde mi infancia, desarrollé un fuerte interés por la electrónica, inspirado por mi padre, quien me enseñó a trabajar con circuitos básicos en protoboard y luego en PCB. <br />
           Juntos, exploramos desde temporizadores con el IC LM555 hasta secuenciadores de luces de 220 voltios utilizando el CD4017.
           Esta pasión me llevó a montar mi propia discoteca móvil a una edad temprana, donde gestionaba todo el montaje y funcionamiento bajo la mirada asombrada de los clientes. <br />
@@ -71,7 +74,7 @@ function AboutMe() {
         </p>
         <hr /><br />
         <h3 className="text-2xl font-semibold mb-4">Educación</h3>
-        <p className="text-gray-700 mb-6">
+        <p className="mb-6">
           Me gradué como <b>Programador Fullstack</b> en el Instituto BIOS de Uruguay. También tengo una orientación previa en electrónica,
           lo que me proporciona una base sólida en tecnología y resolución de problemas. <br />
           Educación en Instituto Arnold Gesell, Uruguay:
@@ -84,7 +87,7 @@ function AboutMe() {
         </p>
         <hr /><br />
         <h3 className="text-2xl font-semibold mb-4">Intereses Personales</h3>
-        <p className="text-gray-700 mb-6">
+        <p className="mb-6">
           Disfruto de la electrónica como pasatiempo y también como una fuente adicional de ingresos a través de proyectos personales y reparaciones específicas. <br />
           Me dedico activamente a la minería de criptomonedas. <br />
           También me apasiona la psicología y disfruto explorando temas relacionados con el crecimiento espiritual y la meditación. <br /><br />
