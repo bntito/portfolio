@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Iot from '../assets/images/iot.png';
+import Botx from '../assets/images/botx.png';
 import Crece from '../assets/images/crece.png';
 import Datamanagement from '../assets/images/datamanagement.png';
 import Einstitute from '../assets/images/eins.png';
@@ -55,6 +56,35 @@ function Projects() {
         </div>
       </div>
 
+      {/* Proyecto: Trade Bot */}
+      <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
+        <h3 className="text-xl font-semibold mb-2">Proyecto: Trade Bot</h3>
+        <p className="mb-4">
+          <a href='https://tradebotx.netlify.app' target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          https://tradebotx.netlify.app
+          </a>
+        </p>
+        <p className="mb-2">Descripción: Transacciones Automáticas de Cryptomonedas.</p>
+        <p className="mb-2">Base de datos: MySQL</p>
+
+        <div className="flex justify-center">
+          <a href="https://tradebotx.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
+            <img src={Botx} alt="Vista previa de TradeBot" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+          </a>
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-blue-500 text-white rounded-full px-3 py-1 flex items-center mb-2">
+            <FontAwesomeIcon icon={faReact} className="mr-1" />
+            React
+          </div>
+          <div className="bg-blue-200 text-gray-700 rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faDatabase} className="mr-1" />
+            MySQL
+          </div>
+        </div>
+      </div>
+
       {/* Proyecto: Crecer */}
       <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
         <h3 className="text-xl font-semibold mb-2">Proyecto: Crecer</h3>
@@ -97,7 +127,7 @@ function Projects() {
 
         <div className="flex justify-center">
           <a href="https://managemendata.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
-            <img src={Datamanagement} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+            <img src={Datamanagement} alt="Vista previa de DataManagament" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
         
@@ -126,7 +156,7 @@ function Projects() {
 
         <div className="flex justify-center">
           <a href="https://e-institute.netlify.app" target="_blank" rel="noopener noreferrer" className="block mb-4">
-            <img src={Einstitute} alt="Vista previa de Crecer" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+            <img src={Einstitute} alt="Vista previa de e-Institute" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
           </a>
         </div>
         
