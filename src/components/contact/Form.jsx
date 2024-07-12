@@ -40,6 +40,37 @@ function ContactForm() {
   };
 
   useEffect(() => {
+    const postData = async () => {
+      try {
+        const data = {
+          name: 'Usuario',
+          email: null,
+          subject: null,
+          message: 'Nuevo ingreso'
+        };
+  
+        const options = {
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        };
+  
+        const response = await fetch(api, options);
+  
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+  
+      } catch (error) {
+    
+      }
+    };
+  
+    postData();
+  }, [api]);
+  
+
+  useEffect(() => {
     if (dataServer?.status == null) {
       return;
     }
