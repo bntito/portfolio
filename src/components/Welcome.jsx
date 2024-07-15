@@ -13,7 +13,7 @@ import Form from './contact/Form';
 function Welcome() {
   const emojiUnicode = emojione.shortnameToUnicode(':man_technologist:');
   const githubLink = 'https://github.com/bntito';
-  const linkedinLink = 'https://www.linkedin.com/in/';
+  const linkedinLink = 'https://www.linkedin.com/in/bruno-tito-028204319';
 
   const copyEmailToClipboard = () => {
     const email = 'brunotitodev@gmail.com';
@@ -112,11 +112,15 @@ function Welcome() {
               </button>
             </div>
             <div>
-              <FontAwesomeIcon icon={faGithub} className="text-2xl mr-2 text-gray-800 dark:text-gray-300" />
-              <a href={githubLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">GitHub</a>
+              <a href={githubLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">
+                <FontAwesomeIcon icon={faGithub} className="text-2xl mr-2 text-gray-800 dark:text-gray-300" />
+                GitHub
+              </a>
               {' '}
-              <FontAwesomeIcon icon={faLinkedin} className="text-2xl mr-2 text-blue-500" />
-              <a href={linkedinLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">LinkedIn</a>
+              <a href={linkedinLink} className="text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white mx-2">
+                <FontAwesomeIcon icon={faLinkedin} className="text-2xl mr-2 text-blue-500" />
+                LinkedIn
+              </a>
             </div>
           </div>
         </motion.div>
