@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import emojione from 'emojione';
-import devImage from '../assets/images/dev.jpg';
+import devImage from '../assets/images/Escritoriouno.jpg';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
