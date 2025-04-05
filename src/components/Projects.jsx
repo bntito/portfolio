@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import FactoryFlow from '../assets/images/factoryflow.png';
 import Iot from '../assets/images/iot.png';
 import Botx from '../assets/images/botx.png';
 import Crece from '../assets/images/crece.png';
@@ -8,7 +9,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faVuejs, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { DarkModeContext } from '../DarkModeContext'; // Ajusta la ruta según tu estructura de archivos
+import { DarkModeContext } from '../DarkModeContext';
 
 function Projects() {
   const { darkMode } = useContext(DarkModeContext);
@@ -16,6 +17,41 @@ function Projects() {
   return (
     <section id="projects" className={`min-h-screen p-8 flex flex-col items-center ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-700'}`}>
       <h2 className="text-3xl font-bold mb-4 text-center">Proyectos</h2>
+
+      {/* Proyecto: FactoryFlow */}
+      <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
+        <h3 className="text-xl font-semibold mb-2">Proyecto: FactoryFlow</h3>
+        <p className="mb-4">
+          <a href='https://ingintegral.netlify.app/' target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          https://ingintegral.netlify.app/
+          </a>
+        </p>
+        <p className="mb-2">Descripción: Plataforma de control de producción, insumos, mantenimiento y costos.</p>
+        <p className="mb-2">Base de datos: MySQL</p>
+        <p className="mb-4">
+          Servidor <br />
+          <a href="https://factoryflowserver.onrender.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+            https://factoryflowserver.onrender.com/
+          </a>
+        </p>
+
+        <div className="flex justify-center">
+          <a href="https://factoryflow.netlify.app/" target="_blank" rel="noopener noreferrer" className="block mb-4">
+            <img src={FactoryFlow} alt="Vista previa de FactoryFlow" className="w-full md:max-w-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+          </a>
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="bg-blue-500 text-white rounded-full px-3 py-1 flex items-center mb-2">
+            <FontAwesomeIcon icon={faReact} className="mr-1" />
+            React
+          </div>
+          <div className="bg-blue-200 text-gray-700 rounded-full px-3 py-1 flex items-center mb-2 ml-2">
+            <FontAwesomeIcon icon={faDatabase} className="mr-1" />
+            MySQL
+          </div>
+        </div>
+      </div>
 
       {/* Proyecto: IoT Academy */}
       <div className="mb-8 w-full md:w-2/3 lg:w-1/2 text-center">
