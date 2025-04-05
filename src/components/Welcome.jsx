@@ -39,7 +39,8 @@ function Welcome() {
           <p className="text-gray-700 dark:text-gray-300 text-center mb-6 leading-relaxed">
             No soy un robot,<br />
             soy un <span className='text-indigo-500'>desarrollador Fullstack</span> apasionado por la programación.<br />
-            Mi enfoque se centra en combinar diseño elegante con funcionalidad robusta.
+            También cuento con perfil técnico como <span className='text-indigo-500'>electrónico y electromecánico</span>, lo que me permite combinar tecnología, 
+            diseño y experiencia en cada proyecto.
           </p>
           <div className="text-center mb-6">
             <img 
